@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Personal } from '../personal';
+import { PersonalService } from '../personal.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registrar-personal',
   templateUrl: './registrar-personal.component.html',
@@ -10,18 +12,28 @@ export class RegistrarPersonalComponent implements OnInit{
 
   personal: Personal = new Personal();
 
+  constructor(private personalServicio:PersonalService, private router:Router){
 
-  constructor(){}
+  }
 
   ngOnInit(): void {
-
-
-    console.log(this.personal);
       
   }
 
+  guardarPersonal(){
+    this.personalServicio.registrarPersonal(this.personal).subscribe(dato =>{ 
+      console.log(dato);
+
+    },error => console.log(error));
+  }
+
+  irALaListaDePersonal(){
+    this.router.navigate(['/personal']);
+  }
+
+
   onSubmit(){
-    console.log(this.personal);
+    this.guardarPersonal();
   }
 
 }

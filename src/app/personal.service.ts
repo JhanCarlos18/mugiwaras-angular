@@ -19,7 +19,7 @@ export class PersonalService {
   }
 
   //para crear un nuevo empleado
-  registrarPersonal(personal:Personal): Observable<object>{
+  registrarPersonal(personal:Personal): Observable<Object>{
     return this.httpClient.post(`${this.baseURL}`, personal);
 
   }

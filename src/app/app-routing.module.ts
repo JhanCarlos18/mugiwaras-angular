@@ -7,6 +7,7 @@ const routes: Routes = [
   {path : 'personal', component:ListaPersonalComponent},
   {path :'', redirectTo:'personal', pathMatch:'full'},
   {path : 'registrar-personal', component: RegistrarPersonalComponent}
+
 ];
 
 @NgModule({
