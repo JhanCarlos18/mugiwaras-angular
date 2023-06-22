@@ -1,0 +1,22 @@
+<h2 class="text-center">Lista Personal</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>idPersonal</th>
+            <th>Nombre</th>
+            <th>DNI</th>
+            <th>Cargo</th>
+            <th>Imagen</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let personal of personal">
+            <td>{{personal.idpersonal}}</td>
+            <td>{{personal.nombre}}</td>
+            <td>{{personal.dni}}</td>
+            <td>{{personal.cargo}}</td>
+            <td>{{personal.imagen}}</td>
+        </tr>
+    </tbody>
+</table>
