@@ -8,19 +8,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrarPersonalComponent } from './registrar-personal/registrar-personal.component';
 import { FormsModule } from '@angular/forms';
+import { ActualizarPersonalComponent } from './actualizar-personal/actualizar-personal.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaPersonalComponent,
-    RegistrarPersonalComponent
+    RegistrarPersonalComponent,
+    ActualizarPersonalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,8 +17,16 @@ export class RegistrarPersonalComponent implements OnInit{
   }
 
   ngOnInit(): void {
+ 
       
   }
+
+  actualizarPersonal(idpersonal:number){
+    this.router.navigate(['actualizar-personal', idpersonal]);
+  }
+
+
+
 
   guardarPersonal(){
     this.personalServicio.registrarPersonal(this.personal).subscribe(dato =>{ 
